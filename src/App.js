@@ -1,13 +1,18 @@
 import "./App.css";
-import Cabecalho from "./componentes/Cabecalho";
-import Rodape from "./componentes/Rodape";
+import Header from "./componentes/Header/Header";
+import Footer from "./componentes/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
           <>
-              <Cabecalho />
+              <Header />
               <h2>Rango em Construcao...</h2>
-              <Rodape />
+              <Routes>
+              <Route path="/" element={<Home />} />
+              </Routes>
+              <Footer />
           </>
   );
 }
